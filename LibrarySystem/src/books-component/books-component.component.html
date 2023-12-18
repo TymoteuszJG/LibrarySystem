@@ -1,0 +1,10 @@
+<p>
+  books-component works!
+</p>
+<div *ngFor="let book of AllBooks">
+  <div (click)="goToDetailsPage(book.booksId)" >
+    <h2>Name:{{ book.bookName }}</h2>
+    <p>Availability: {{ book.availability }}</p>
+    <!-- Add more properties as needed -->
+  </div>
+</div>

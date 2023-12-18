@@ -1,4 +1,4 @@
-﻿using DataLibrary.Models;
+using DataLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,5 +28,17 @@ namespace DataLibrary.Repositories
             var result = _context.Staff.ToList();
             return result;
         }
+
+        public int GetStaffId(string login, string password)
+        {
+          if (_context.Staff.Any(u => u.Login == login && u.Password == password))
+          {
+            return _context.Staff.Single(u => u.Login == login && u.Password == password).Staff_ID;
+          }
+          else
+          {
+            return 0;
+          }
     }
+  }
 }

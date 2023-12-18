@@ -1,4 +1,4 @@
-﻿using DataLibrary.Commands;
+using DataLibrary.Commands;
 using DataLibrary.Models;
 using DataLibrary.Queries;
 using MediatR;
@@ -26,5 +26,12 @@ namespace LibrarySystem.Controllers
             var result = await _mediator.Send(new GetStaff());
             return Ok(result);
         }
-    }
+        [HttpGet("/GetStaffId")]
+        public async Task<ActionResult> GetStaffId(string login, string password)
+        {
+          var result = await _mediator.Send(new GetStaffId(login,password));
+          return Ok(result);
+        }
+
+  }
 }
