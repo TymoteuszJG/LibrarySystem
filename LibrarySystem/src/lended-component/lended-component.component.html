@@ -1,0 +1,8 @@
+<div *ngFor="let lended of AllLended">
+  <div (click)="releaseBook(lended.booksId, lended.borrowersId)" >
+    <h2>BookId:{{ lended.booksId}}</h2>
+    <p>DueDate: {{lended.dueDate}}</p>
+
+   
+  </div>
+</div>

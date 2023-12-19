@@ -10,7 +10,7 @@ namespace DataLibrary.Repositories
 {
     public interface IStaffRepository
     {
-        Staff AddStaff(Staff staff);
+        Boolean AddStaff(Staff staff);
         List<Staff> GetStaff();
         int GetStaffId(string login, string password);
 

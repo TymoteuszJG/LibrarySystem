@@ -25,16 +25,28 @@ import {MatRadioModule} from '@angular/material/radio';
 import { MainPageComponentComponent } from 'main-page-component/main-page-component.component';
 import { BooksComponentComponent } from 'books-component/books-component.component';
 import { BookDetailsComponentComponent } from 'book-details-component/book-details-component.component';
+import { AuthorsComponentComponent } from 'authors-component/authors-component.component';
+import { StaffComponentComponent } from 'staff-component/staff-component.component';
+import { AddStaffcomponentComponent } from 'add-staffcomponent/add-staffcomponent.component';
+import { LendedComponentComponent } from 'lended-component/lended-component.component';
+import { BorrowersComponentComponent } from 'borrowers-component/borrowers-component.component';
+import { AddBorrowerComponent } from 'add-borrower/add-borrower.component';
 
 
 
 @NgModule({
-  declarations: [					
+  declarations: [											
     AppComponent,
     LoginComponent,
       MainPageComponentComponent,
       BooksComponentComponent,
-      BookDetailsComponentComponent
+      BookDetailsComponentComponent,
+      AuthorsComponentComponent,
+      StaffComponentComponent,
+      AddStaffcomponentComponent,
+      LendedComponentComponent,
+      BorrowersComponentComponent,
+      AddBorrowerComponent
    ],
   imports: [
     BrowserModule,

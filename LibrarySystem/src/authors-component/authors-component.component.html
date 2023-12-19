@@ -1,0 +1,8 @@
+
+<div *ngFor="let author of AllAuthors">
+  <div (click)="goToDetailsPage(author.authorsId)" >
+    <h2>Name:{{ author.name }}</h2>
+    <p>Surname: {{ author.surname}}</p>
+    <!-- Add more properties as needed -->
+  </div>
+</div>

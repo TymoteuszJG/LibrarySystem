@@ -1,4 +1,4 @@
-﻿using DataLibrary.Models;
+using DataLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,6 +59,7 @@ namespace DataLibrary.Repositories
         {
             var result = _context.Books.FirstOrDefault
         (x => x.BooksId == bookId);
+      result.Availability = true;
             var result2 = _context.Lended.FirstOrDefault
            (x => x.BooksId == bookId && x.BorrowersId == borrowerId);
 

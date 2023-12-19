@@ -1,0 +1,24 @@
+<div class="login-containter">
+  <div class="login-card">
+    <h3 class="login-title">Dodaj Użytkownika</h3>
+    <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()" class="login-form">
+      <label for="registry_no" class="login-label">
+        LOGIN
+      </label>
+      <div class="field-container">
+        <input class="login-input" placeholder="login" id="registry_no" type="text" formControlName="registry_no">
+      </div>
+      <label for="password" class="login-label">
+        HASŁO
+      </label>
+      <div class="field-container">
+        <input class="login-input" placeholder="password" id="password" matInput [type]="hide ? 'password' : 'text'" formControlName="password" >
+      </div>
+      <div class="field-container">
+        <button class="login-button" type="submit" [disabled]="!LoginForm.valid" >ZALOGUJ SIĘ</button>
+      </div>
+      <div class="login-error" *ngIf="error">WYSTĄPIŁ BŁĄD DODAWANIA</div>
+    </form>
+  </div>
+  </div>
+  

@@ -1,4 +1,5 @@
 using DataLibrary.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,11 +17,21 @@ namespace DataLibrary.Repositories
             _context = context;
         }
 
-        public Staff AddStaff(Staff staff)
+        public Boolean AddStaff(Staff staff)
         {
-             _context.Staff.Add(staff);
-            _context.SaveChanges();
-            return staff;
+          bool userExists = _context.Staff.Any(u => u.Login == staff.Login);
+
+          if (!userExists)
+          {
+ 
+            _context.Staff.Add(staff);
+            _context.SaveChanges(); 
+
+            return true; 
+          }
+
+          return false; 
+   
         }
 
         public List<Staff> GetStaff()

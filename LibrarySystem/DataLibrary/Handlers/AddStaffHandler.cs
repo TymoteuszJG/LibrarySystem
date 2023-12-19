@@ -1,4 +1,4 @@
-﻿using DataLibrary.Commands;
+using DataLibrary.Commands;
 using DataLibrary.Models;
 using DataLibrary.Repositories;
 using MediatR;
@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace DataLibrary.Handlers
 {
 
-    public class AddStaffHandler : IRequestHandler<AddStaff, Staff>
+    public class AddStaffHandler : IRequestHandler<AddStaff, Boolean>
     {
         private readonly IStaffRepository _staffRepository;
 
@@ -19,7 +19,7 @@ namespace DataLibrary.Handlers
         {
             _staffRepository = staffRepository;
         }
-        public async Task<Staff> Handle(AddStaff request, CancellationToken cancellationToken)
+        public async Task<Boolean> Handle(AddStaff request, CancellationToken cancellationToken)
         {
             var result = _staffRepository.AddStaff(request.staff);
             return result;

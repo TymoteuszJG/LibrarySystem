@@ -1,3 +1,15 @@
-<p>
-  book-details-component works!
-</p>
+<div *ngIf="dataObject">
+  <p>YearOfPublication: {{ dataObject.publicationYear }}</p>
+  <p>Name: {{ dataObject.bookName }}</p>
+  <div *ngIf="dataObject.availability">
+    <button (click)="navigateToPage()">Reserve this book</button>
+  </div>
+</div>
+
+<div *ngIf="!dataObject">
+  <p>Loading...</p>
+</div>
+
+<div *ngIf="success">
+  <!-- Display success message or other content when success is true -->
+</div>

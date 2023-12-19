@@ -1,4 +1,4 @@
-﻿using DataLibrary.Commands;
+using DataLibrary.Commands;
 using DataLibrary.Models;
 using DataLibrary.Queries;
 using MediatR;
@@ -20,5 +20,11 @@ namespace LibrarySystem.Controllers
             var result = await _mediator.Send(new AddBorrower(borrower));
             return Ok(result);
         }
-    }
+        [HttpGet("/GetAllBorrowers")]
+        public async Task<ActionResult> GetAllBorrowers()
+        {
+          var result = await _mediator.Send(new GetAllBorrowers());
+          return Ok(result);
+        }
+  }
 }

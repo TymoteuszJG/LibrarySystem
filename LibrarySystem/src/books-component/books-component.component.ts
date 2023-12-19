@@ -15,17 +15,29 @@ export class BooksComponentComponent implements OnInit {
   constructor(private service: DatabaseAccessServiceService,private route: ActivatedRoute,private router: Router, private authService: AuthenticateService) { }
 
   ngOnInit():void {
-    this.service.GetAllBookss().subscribe(resp =>{
-      this.AllBooks = resp;
-      console.log(this.AllBooks)
+
+    this.route.params.subscribe(params => {
+      const authorId = params['id'];
+  
+      if (authorId) {
+        this.service.GetBooksByAuthors(authorId).subscribe(books => {
+          this.AllBooks = books;
+          console.log(this.AllBooks);
+        });
+      } else {
+        this.service.GetAllBookss().subscribe(resp => {
+          this.AllBooks = resp;
+          console.log(this.AllBooks);
+        });
+      }
     });
+   
 
 
   }
 
   goToDetailsPage(bookId: number): void {
-    // Navigate to the details page with the selected book ID
-    this.router.navigate(['/books', bookId]);
+    this.router.navigate(['/booksDetails', bookId]);
   }
 }
 

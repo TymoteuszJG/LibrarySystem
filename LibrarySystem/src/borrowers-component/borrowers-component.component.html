@@ -1,0 +1,16 @@
+
+
+
+<div *ngFor="let borrrower of AllBorrowers">
+  <div (click)="goToDetailsPage(borrrower.borrowersId)" >
+    <h2>Name:{{ borrrower.name}}</h2>
+    <p>Surname: {{ borrrower.surname}}</p>
+    <p>Telephone: {{ borrrower.contactNumber}}</p>
+    <p>Email: {{ borrrower.email}}</p>
+   
+  </div>
+</div>
+<div  *ngIf="bookId !== null && bookId !== 0">
+  <!-- Your HTML content for when bookId is present -->
+  <p>This content appears when bookId is present: {{ bookId }}</p>
+</div>

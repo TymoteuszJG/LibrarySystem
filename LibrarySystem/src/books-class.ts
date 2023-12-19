@@ -1,7 +1,7 @@
 export interface BooksClass {
     booksId:number,
     bookName:string,
-    AuthorsId:number,
-    PublicationYear:number,
+    authorsId:number,
+    publicationYear:number,
     availability:Boolean
 }

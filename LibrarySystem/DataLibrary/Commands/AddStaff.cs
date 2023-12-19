@@ -1,4 +1,4 @@
-﻿using DataLibrary.Models;
+using DataLibrary.Models;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,5 +8,5 @@ using System.Threading.Tasks;
 
 namespace DataLibrary.Commands
 {
-    public record AddStaff(Staff staff) : IRequest<Staff>;
+    public record AddStaff(Staff staff) : IRequest<Boolean>;
 }
