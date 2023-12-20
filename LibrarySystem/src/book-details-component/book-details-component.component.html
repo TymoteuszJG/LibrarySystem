@@ -1,5 +1,7 @@
-<div *ngIf="dataObject">
-  <p>YearOfPublication: {{ dataObject.publicationYear }}</p>
+<div class="page-container">
+
+<div *ngIf="dataObject" class="main-page-card">
+  <p >YearOfPublication: {{ dataObject.publicationYear }}</p>
   <p>Name: {{ dataObject.bookName }}</p>
   <div *ngIf="dataObject.availability">
     <button (click)="navigateToPage()">Reserve this book</button>
@@ -11,5 +13,6 @@
 </div>
 
 <div *ngIf="success">
-  <!-- Display success message or other content when success is true -->
+ 
+</div>
 </div>

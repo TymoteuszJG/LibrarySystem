@@ -1,0 +1,50 @@
+.navigation-buttons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.main-page-card{
+    height: 25vh;
+    width: 40vw;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 8px 8px 24px 0px rgba(64, 64, 64, 1);
+}
+
+.main-page-title{
+    font-weight: 700;
+    font-size: large;
+}
+
+.navigation-button{
+    margin:  1rem;
+    background-color: rgb(179, 207, 233);
+    height: 5rem;
+    width: 5rem;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    font-weight: 600;
+}
+
+.navigation-button:hover{
+    background-color: rgb(63, 131, 194);
+    color: white;
+}
+
+.page-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(63, 131, 194)
+
+}
